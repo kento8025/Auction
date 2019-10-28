@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<!-- 商品情報入力-->
+
 <html lang="ja">
 
 	<head>
 
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/zixyouhou.css">
+		<link rel="stylesheet" href="../../css/zixyouhou.css">
 		<title></title>
 
 
@@ -14,8 +17,8 @@
 
     <!--ホームリンクタイトル画像-->
 
-		<a href="file:///C:/Users/kento/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/WEB%E5%88%B6%E4%BD%9C/WEB%E5%88%B6%E4%BD%9C/WEB%E5%88%B6%E4%BD%9CNO1.html">
-		<img src="img/Title.png" alt="タイトル" width="200" height="80"></a><br>
+		<a href="../../hoomPege">
+		<img src="../../img/Title.png" alt="タイトル" width="200" height="80"></a><br>
 
 
 		<div id="box">
@@ -191,7 +194,7 @@
 
 				<!--登録ボタン-->
 
-					<a href="file:///C:/Users/kento/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/WEB%E5%88%B6%E4%BD%9C/WEB%E5%88%B6%E4%BD%9C/no9%E5%86%85%E5%AE%B9%E7%A2%BA%E8%AA%8D.html" class="btn-square-so-pop">出品する</a>
+					<a href="../../ContentConfirmation" class="btn-square-so-pop">出品する</a>
 
 
 
