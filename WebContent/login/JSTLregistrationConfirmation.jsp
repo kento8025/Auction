@@ -33,13 +33,14 @@
 
 
 			<h2>お客様情報</h2>
-			<br> 名前<br> 〇〇 ✖✖ <br> <br> <br> 生年月日<br>
-			1999年 1月 １日 <br> <br> 性別 <br> 男 <br> <br>
-
-			メールアドレス <br> sample＠address <br> <br> <br>
+			<br> 名前<br> ${requestScope.name} <br> <br> <br>
+			生年月日<br> ${requestScope.year}年 ${requestScope.month}月
+			${requestScope.day}日 <br> <br> 性別 <br>
+			${requestScope.manOrWoman} <br> <br> メールアドレス <br>
+			${requestScope.mail} <br> <br> <br>
 			<h2>会員情報</h2>
-			<br> ID <br> 123654789<br> <br> password <br>
-			123456897<br> <br> <br>
+			<br> ID <br> ${requestScope.id}<br> <br> password
+			<br> ・・・・・・・・<br> <br> <br>
 
 
 		</form>
@@ -74,7 +75,6 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js">
-
 </script>
 
 

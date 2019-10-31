@@ -1,7 +1,8 @@
+package servlet.login;
+
 import java.text.DateFormat;
 
-public class  Test {
-
+public class CheckDate {
 	public static boolean checkDate(String strDate) {
 
 	    strDate = strDate.replace('-', '/');
@@ -19,6 +20,5 @@ public class  Test {
 	public static void main(String[] args) {
 		System.out.print(checkDate("2007/02/10"));
 	}
-
 
 }

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 
 <!--メニュー画面-->
@@ -68,6 +71,8 @@
 
 
 
+
+
 		<h2>パソコン</h2>
 		<div class="q1">
 			<img src="../img/pc1.jpg" alt="タイトル" width="200" height="200"></a><br>
@@ -81,53 +86,27 @@
 
 		<!--コピペで増やせる-->
 
-		<div id="q3">
-			<h2>パソコン</h2>
-			<br>
-			<div class="q1">
-				<img src="../img/pc1.jpg" alt="タイトル" width="200" height="200"></a><br>
+
+		<c:forEach begin="1" end="4">
+
+
+			<div id="q3">
+				<h2>パソコン</h2>
+				<br>
+				<div class="q1">
+					<img src="../img/pc1.jpg" alt="タイトル" width="200" height="200"><br>
+				</div>
+				<div class=q2>
+					現在○○円<br> 入札回数△△ 残り時間○○日
+				</div>
+				<br> 商品情報<br> サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
 			</div>
-			<div class=q2>
-				現在○○円<br> 入札回数△△ 残り時間○○日
-			</div>
-			<br> 商品情報<br> サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-		</div>
-
-
-		<div id="q3">
-			<h2>パソコン</h2>
-			<br>
-			<div class="q1">
-				<img src="../img/pc1.jpg" alt="タイトル" width="200" height="200"></a><br>
-			</div>
-			<div class=q2>
-				現在○○円<br> 入札回数△△ 残り時間○○日
-			</div>
-			<br> 商品情報<br> サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-		</div>
-
-
-
-		<div id="q3">
-			<h2>パソコン</h2>
-			<br>
-			<div class="q1">
-				<img src="../img/pc1.jpg" alt="タイトル" width="200" height="200"></a><br>
-			</div>
-			<div class=q2>
-				現在○○円<br> 入札回数△△ 残り時間○○日
-			</div>
-			<br> 商品情報<br> サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル
-		</div>
-
-
-	</div>
+		</c:forEach>
 
 
 
 	<div id="botan">
-		<button type=“button”
-			onclick="location.href='../hoomPege'">戻る</button>
+		<button onclick="location.href='../hoomPege'">戻る</button>
 	</div>
 
 
@@ -139,5 +118,6 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js">
 
+
 </script>
-<html>
+</html>
