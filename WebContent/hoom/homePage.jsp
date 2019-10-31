@@ -5,8 +5,10 @@
 
 <head>
 
+<%-- ${pageContext.request.contextPath}
+ --%>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../css/hoom.css">
+<link rel="stylesheet" type="text/css" href="../css/hoom.css">
 <title>オークション</title>
 <!--追加-->
 

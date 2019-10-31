@@ -33,13 +33,13 @@
 
 
 			<h2>お客様情報</h2>
-			<br> 名前<br> ${requestScope.name} <br> <br> <br>
-			生年月日<br> ${requestScope.year}年 ${requestScope.month}月
-			${requestScope.day}日 <br> <br> 性別 <br>
-			${requestScope.manOrWoman} <br> <br> メールアドレス <br>
-			${requestScope.mail} <br> <br> <br>
+			<br> 名前<br> ${requestScope.user.name} <br> <br> <br>
+			生年月日<br> ${requestScope.user.year}年 ${requestScope.user.month}月
+			${requestScope.user.day}日 <br> <br> 性別 <br>
+			${requestScope.user.manOrWoman} <br> <br> メールアドレス <br>
+			${requestScope.user.mail} <br> <br> <br>
 			<h2>会員情報</h2>
-			<br> ID <br> ${requestScope.id}<br> <br> password
+			<br> ID <br> ${requestScope.user.id}<br> <br> password
 			<br> ・・・・・・・・<br> <br> <br>
 
 

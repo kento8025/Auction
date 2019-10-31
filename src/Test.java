@@ -1,24 +1,11 @@
-import java.text.DateFormat;
-
-public class  Test {
-
-	public static boolean checkDate(String strDate) {
-
-	    strDate = strDate.replace('-', '/');
-	    DateFormat format = DateFormat.getDateInstance();
-	    // “ú•t/‰ğÍ‚ğŒµ–§‚És‚¤‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
-	    format.setLenient(false);
-	    try {
-	        format.parse(strDate);
-	        return true;
-	    } catch (Exception e) {
-	        return false;
-	    }
-	}
+public class Test {
 
 	public static void main(String[] args) {
-		System.out.print(checkDate("2007/02/10"));
+		String str1 = "abc";
+		String str2 = new String("abc");
+		System.out.println(str1 == str2);
+		System.out.println(str1.equals(str2));
+		str1 = str2;
+		System.out.println(str1 == str2);
 	}
-
-
 }

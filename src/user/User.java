@@ -11,12 +11,17 @@ public class User {
 	private String id;
 	private String passWord;
 
-	public User(String name ) {
+	public User(String name, String year, String month, String day, String manOrWoman, String mail, String id,
+			String passWord) {
 		this.name = name;
+		this.year = year;
+		this.month = month;
+		this.day = day;
+		this.manOrWoman = manOrWoman;
+		this.mail = mail;
+		this.id = id;
+		this.passWord = passWord;
 	}
-
-
-
 
 	public String getName() {
 		return name;
@@ -81,9 +86,5 @@ public class User {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
-
-
-
-
 
 }
