@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../css/hoom.css">
 <title>オークション</title>
 <!--追加-->
+<!--追加-->
 
 
 </head>

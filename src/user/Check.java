@@ -76,13 +76,12 @@ import servlet.login.CheckDate;
 public class Check {
 
 	private boolean errorFlag = false;
-	HttpServletRequest request;
 
 	public boolean isErrorFlag() {
 		return errorFlag;
 	}
 
-	private HttpServletRequest errorCheck(User user) {
+	public void errorCheck(HttpServletRequest request, User user) {
 
 		boolean passWordCheck = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])[0-9a-z\\-]{8,16}$", user.getPassWord());
 		boolean mailCheck = Pattern.matches(".*@.*", user.getMail());
@@ -117,7 +116,6 @@ public class Check {
 			request.setAttribute("idError", "ID‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
 			errorFlag = true;
 		}
-
 
 	}
 
