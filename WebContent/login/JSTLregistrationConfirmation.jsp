@@ -11,6 +11,113 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../css/sinnki.css">
 <link rel="stylesheet" href="../css/kakuninn.css">
+
+<style>
+
+h3 {
+	color: red;
+	margin: auto;
+	padding: 50px;
+	width: 25%;
+}
+
+#inputInformation {
+	padding-top: 100px;
+	margin: auto;
+	width: 150px;
+}
+
+#button {
+	margin: auto;
+	width: 10%;
+	height: 10px:
+}
+
+#newButton{
+	width; 5%;
+	height; 5px:
+}
+
+#editButton{
+	width; 5%;
+	height; 5px:
+}
+
+
+
+
+/*新規登録*/
+.btn-square-so-pop {
+	width: 80px;
+	margin: 5px;
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	text-align: center;
+	color: #FFF;
+	background: #fd9535; /*色*/
+	border-radius: 4px; /*角の丸み*/
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0
+		rgba(0, 0, 0, 0.05);
+	font-weight: bold;
+	border: solid 2px #d27d00; /*線色*/
+}
+
+.btn-square-so-pop:active {
+	/*押したとき*/
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+
+
+#block1{
+    width: 40%;
+    margin: auto;
+}
+
+/*出品する*/
+
+.btn-square-so-pop {
+    margin: auto;
+    text-align: center;
+	width:80px;
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	color: #FFF;
+	background: #fd9535;/*色*/
+	border-radius: 4px;/*角の丸み*/
+	box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+	font-weight: bold;
+    border: solid 2px #d27d00;/*線色*/
+    }
+
+
+    /*編集する*/
+
+.btn-square-so-opo {
+    margin: auto;
+    text-align: center;
+	width:80px;
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	color: #FFF;
+	background: #2548e4;/*色*/
+	border-radius: 4px;/*角の丸み*/
+	box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+	font-weight: bold;
+    border: solid 2px #2548e4;/*線色*/
+    }
+
+
+</style>
+
+
+
 <title></title>
 
 
@@ -26,7 +133,7 @@
 	<br>
 
 
-	<div id="box1">
+	<div id="inputInformation">
 
 		<form>
 
