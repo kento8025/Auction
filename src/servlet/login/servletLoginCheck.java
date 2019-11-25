@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import entity.userDao;
+
 /**
  * Servlet implementation class servletLoginCheck
  */
@@ -38,22 +40,32 @@ public class servletLoginCheck extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 
-		System.out.print("通過");
+		System.out.print("ログインチェック");
+		/*
+				final String ID = "test";
+				final String PASSWORD = "0000";
 
-		final String ID = "test";
-		final String PASSWORD = "0000";
+				String id = request.getParameter("id");
+				String passWord = request.getParameter("passWord");
+
+				System.out.print(id);
+				System.out.print(passWord);
+		*/
+
+		userDao dao = new userDao();
 
 		String id = request.getParameter("id");
 		String passWord = request.getParameter("passWord");
 
-		System.out.print(id);
-		System.out.print(passWord);
-
-		if(ID.equals(id)&&PASSWORD.equals(passWord)) {
+		if(dao.loginCheck(id, passWord)) {
 			response.sendRedirect("../JSP_Auction/login/loginTest.jsp");
 		}else {
 			response.sendRedirect("../JSP_Auction/login/loginError.jsp");
 		}
+
+
+
+
 
 	}
 

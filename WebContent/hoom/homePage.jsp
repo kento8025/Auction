@@ -379,9 +379,8 @@ a {
 
 	<div id="box1">
 
-		<h1>
-			<div id="featuredProducts">目玉商品</div>
-		</h1>
+
+			<div id="featuredProducts"><h1>目玉商品	</h1>
 
 		<span class="new"><img src="../img/kinn.jpg" alt="金塊"
 			width="250" height="250"></span> <span class="new"><img
@@ -389,6 +388,7 @@ a {
 			class="new"><img src="../img/hamu.jpg" alt="ハムスター" width="250"
 			height="250"></span>
 
+			</div>
 
 	</div>
 

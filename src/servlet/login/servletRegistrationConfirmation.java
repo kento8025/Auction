@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.Check;
-import user.User;
+import dto.User;
+import tool.Check;
 
 /**
  * Servlet implementation class servletRegistrationConfirmation
@@ -42,7 +42,7 @@ public class servletRegistrationConfirmation extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String name = request.getParameter("name");
+		String userName = request.getParameter("userName");
 		String year = request.getParameter("year");
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");
@@ -51,9 +51,7 @@ public class servletRegistrationConfirmation extends HttpServlet {
 		String id = request.getParameter("id");
 		String passWord = request.getParameter("passWord");
 
-		request.getAttribute("question");
-
-		User user = new User(name, year, month, day, manOrWoman, mail, id, passWord);
+		User user = new User(userName, year, month, day, manOrWoman, mail, id, passWord);
 		Check check = new Check();
 
 		check.errorCheck(request, user);

@@ -1,8 +1,10 @@
-package user;
+package dto;
+
+import java.sql.Date;
 
 public class User {
 
-	private String name;
+	private String userName;
 	private String year;
 	private String month;
 	private String day;
@@ -13,7 +15,7 @@ public class User {
 
 	public User(String name, String year, String month, String day, String manOrWoman, String mail, String id,
 			String passWord) {
-		this.name = name;
+		this.userName = name;
 		this.year = year;
 		this.month = month;
 		this.day = day;
@@ -23,12 +25,35 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public String getName() {
-		return name;
+	public Date getBirthday() {
+		/*
+				String year = "1999";
+				String month = "1";
+				String day = "1";*/
+
+
+		Date date = Date.valueOf(year + "-" + month + "-" + day);
+
+		//Date date = Date.valueOf("1999" + "-" + "1" + "-" + "5");
+
+
+		return date;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public static void main(String[] args) {
+
+		//System.out.println(getBirthday());
+
+	}
+
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String name) {
+		this.userName = name;
 	}
 
 	public String getYear() {

@@ -65,12 +65,13 @@ public class Check {
 }
 */
 
-package user;
+package tool;
 
 import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 
+import dto.User;
 import servlet.login.CheckDate;
 
 public class Check {
@@ -87,7 +88,7 @@ public class Check {
 		boolean mailCheck = Pattern.matches(".*@.*", user.getMail());
 		boolean birthday = CheckDate.checkDate(user.getYear() + "/" + user.getMonth() + "/" + user.getDay());
 
-		if (user.getName().isEmpty()) {
+		if (user.getUserName().isEmpty()) {
 			request.setAttribute("nameError", "–¼‘O‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
 			errorFlag = true;
 		}

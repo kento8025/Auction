@@ -88,8 +88,8 @@ s
 
 
 			<h2>お客様情報</h2>
-			<br> 名前 <br> <input type="text" name="name"
-				value='${requestScope.user.name}'> <br> <font
+			<br> 名前 <br> <input type="text" name="userName"
+				value='${requestScope.user.userName}'> <br> <font
 				color="red">${requestScope.nameError}</font><br> <br> 生年月日<br>
 
 			<select id="year" name="year"><option
@@ -129,8 +129,8 @@ s
 
 
 
-			<font color="red">${requestScope.manOrWomanError}</font><br>
-			<br> メールアドレス <br> <input type="text" name="mail"
+			<font color="red">${requestScope.manOrWomanError}</font><br> <br>
+			メールアドレス <br> <input type="text" name="mail"
 				value='${requestScope.user.mail}'><br> <font
 				color="red">${requestScope.mailError}</font><br> <br> <br>
 
