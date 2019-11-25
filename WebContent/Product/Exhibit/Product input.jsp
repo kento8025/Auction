@@ -142,7 +142,7 @@
 <br>
 
 
-		<form action="../../ContentConfirmation" method="post">
+		<form action="../../ContentConfirmation" method="post" enctype="multipart/form-data">
 
 
 
@@ -155,7 +155,9 @@
 	<!--画像-->
 
 	画像のアップロード<br>
-	 <input type="text" name="productImg" value='${requestScope.product.productImg}'>
+
+	<input type="file" name="file" /><br /> <input type="submit" value="アップロード" />
+
 	<br> <br>
 
 	<!--商品名-->

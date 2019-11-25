@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class hoomPegeServlet
  */
-@WebServlet("/hoomPege")
-public class hoomPegeServlet extends HttpServlet {
+@WebServlet("/homesPege")
+public class homePegeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public hoomPegeServlet() {
+    public homePegeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,8 +29,7 @@ public class hoomPegeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		// ‰æ–Ê‘JˆÚ‚·‚éJSP‚ğw’è‚µA‰æ–Ê‘JˆÚ‚ğÀs‚·‚é
-		response.sendRedirect("../JSP_Auction/hoom/homePage.jsp");
+		request.getRequestDispatcher("/home/homePage.jsp").forward(request, response);
 	}
 
 	/**

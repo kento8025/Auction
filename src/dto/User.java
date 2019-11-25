@@ -25,28 +25,18 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public Date getBirthday() {
-		/*
-				String year = "1999";
-				String month = "1";
-				String day = "1";*/
+	public User(String id ,String passWord) {
+		this.id = id;
+		this.passWord = passWord;
+	}
 
+
+	public Date getBirthday() {
 
 		Date date = Date.valueOf(year + "-" + month + "-" + day);
 
-		//Date date = Date.valueOf("1999" + "-" + "1" + "-" + "5");
-
-
 		return date;
 	}
-
-	public static void main(String[] args) {
-
-		//System.out.println(getBirthday());
-
-	}
-
-
 
 	public String getUserName() {
 		return userName;

@@ -7,7 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import dto.User;
 import entity.userDao;
 
 /**
@@ -41,26 +43,30 @@ public class servletLoginCheck extends HttpServlet {
 		doGet(request, response);
 
 		System.out.print("ログインチェック");
-		/*
-				final String ID = "test";
-				final String PASSWORD = "0000";
 
-				String id = request.getParameter("id");
-				String passWord = request.getParameter("passWord");
-
-				System.out.print(id);
-				System.out.print(passWord);
-		*/
+		HttpSession session = request.getSession(true);
 
 		userDao dao = new userDao();
 
 		String id = request.getParameter("id");
 		String passWord = request.getParameter("passWord");
 
+		request.setAttribute("id", id);
+		request.setAttribute("passWord", passWord);
+
+		User user = new User(id,passWord);
+		request.setAttribute("user", user);
+		session.setAttribute("user", user);
+
+		if(id.isEmpty()){
+			session.removeAttribute("user");
+		}
+
 		if(dao.loginCheck(id, passWord)) {
-			response.sendRedirect("../JSP_Auction/login/loginTest.jsp");
+			//response.sendRedirect("/home/homePage.jsp");
+			request.getRequestDispatcher("/home/homePage.jsp").forward(request, response);
 		}else {
-			response.sendRedirect("../JSP_Auction/login/loginError.jsp");
+			response.sendRedirect("/JSP_Auction/login/loginError.jsp");
 		}
 
 
