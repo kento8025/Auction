@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class User {
 
+	private int userNo;
 	private String userName;
 	private String year;
 	private String month;
@@ -12,7 +13,11 @@ public class User {
 	private String mail;
 	private String id;
 	private String passWord;
+	private int userRank;
+	private Date registrationDate;
+	private Date birthday;
 
+	//新規登録用のコンストラクタ
 	public User(String name, String year, String month, String day, String manOrWoman, String mail, String id,
 			String passWord) {
 		this.userName = name;
@@ -25,11 +30,21 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public User(String id ,String passWord) {
+	//ログイン時データ獲得するためのコンストラクタ
+	public User(int userNo , String name, Date birthday , String manOrWoman, String mail, String id, String passWord ) {
+
+		this.userNo = userNo;
+		this.userName = name;
+		this.manOrWoman = manOrWoman;
+		this.mail = mail;
 		this.id = id;
 		this.passWord = passWord;
 	}
 
+	public User(String id, String passWord) {
+		this.id = id;
+		this.passWord = passWord;
+	}
 
 	public Date getBirthday() {
 
@@ -101,5 +116,38 @@ public class User {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
+
+	public int getUserNo() {
+		return userNo;
+	}
+
+	public void setUserNo(int userNo) {
+		this.userNo = userNo;
+	}
+
+	public Date getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(Date registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	public Date getBirthdayonDate() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public int getUserRank() {
+		return userRank;
+	}
+
+	public void setUserRank(int userRank) {
+		this.userRank = userRank;
+	}
+
 
 }

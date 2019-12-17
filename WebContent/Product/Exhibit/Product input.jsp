@@ -156,7 +156,7 @@
 
 	画像のアップロード<br>
 
-	<input type="file" name="file" /><br /> <input type="submit" value="アップロード" />
+	<input type="file" name="file" /><br />
 
 	<br> <br>
 

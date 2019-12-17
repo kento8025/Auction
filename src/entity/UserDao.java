@@ -11,12 +11,13 @@ import util.Util;
 	INSERT INTO users (user_id,password,user_name,birthday,man_or_woman,mail,registration_date) VALUES ('tanaka000','test0000','“c’†','1998-07-05','’j','mail@gmail',now());
  * */
 
-public class userDao {
+public class UserDao {
 
 	private Connection con;
+	private User user;
 
-	final String INSERT_INTO_USERS = "INSERT INTO users (user_id,password,user_name,birthday,man_or_woman,mail,registration_date) VALUES (?,?,?,?,?,?,now())";
-	final String SELECT_USER = "SELECT * FROM users WHERE user_id = ? AND password = ?";
+	private final String INSERT_INTO_USERS = "INSERT INTO users (user_id,password,user_name,birthday,man_or_woman,mail, user_rank ,registration_date) VALUES (?,?,?,?,?,?,2,now())";
+	private final String SELECT_USER = "SELECT * FROM users WHERE user_id = ? AND password = ?";
 
 	private void Setup() {
 
@@ -83,6 +84,15 @@ public class userDao {
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
+
+				User user = new User(rs.getInt("id"), rs.getString("user_name"), rs.getDate("birthday"),
+						rs.getString("man_or_woman"),
+						rs.getString("mail"), rs.getString("user_id"), rs.getString("password"));
+
+				user.setUserRank(rs.getInt("user_rank"));
+
+				this.user = user;
+
 				return true;
 			}
 
@@ -93,6 +103,10 @@ public class userDao {
 
 		return false;
 
+	}
+
+	public User getUser() {
+		return user;
 	}
 
 }

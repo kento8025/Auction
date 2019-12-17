@@ -82,13 +82,19 @@
 		<div id="block1">
 
 
+			<form action="RistingCompleted" method="post">
+
+
 				<h2>内容確認</h2>
 				<br>
 				<br>
+				出品者： <input type="text" name="userId" value="${fn:escapeXml(user.userName)}" readonly><br>
 				商品名： <input type="text" name="productName" value="${fn:escapeXml(product.productName)}" readonly><br>
-			 	カテゴリ： <input type="text" name="categoryId" value="${fn:escapeXml(product.categoryId)}" readonly><br>
+			 	カテゴリ： <input type="text" name="category" value="${fn:escapeXml(product.categoryName)}" readonly><br>
 				商品の状態  <input type="text" name="productStatus" value="${fn:escapeXml(product.productStatus)}" readonly><br>
-				<div id="img"><img src="img/MAC.jpg" alt=パソコン width="300" height="300"><br>
+				<div id="img">
+				<img src="${fn:escapeXml(product.productImg)}" alt=商品 width="300" height="300"><br>
+				<input type="hidden" name="productImg" value="${fn:escapeXml(product.productImg)}">
 				価格：<input type="text" name="price" value="${fn:escapeXml(product.price)}" readonly><br>
 
 				</div>
@@ -97,30 +103,28 @@
 
 				 説明<br>
 				 <div id="text">
-				 <textarea cols="50" rows="10" name = "description" readonly>
-				 ${fn:escapeXml(product.productName)}
+				 <textarea cols="50" rows="10" name = "description" readonly>${fn:escapeXml(product.description)}
 				 </textarea>
 				<br>
 				<br>
 						発送元：<input type="text" name="shippingOrigin" value="${fn:escapeXml(product.shippingOrigin)}" readonly><br>
 						送料負担：<input type="text" name="postage" value="${fn:escapeXml(product.postage)}" readonly><br>
-						出品者：<input type="text" name="productName" value="test" readonly><br>
 						配送方法：<input type="text" name="shipping_method" value="${fn:escapeXml(product.shipping_method)}" readonly><br>
 						出品期間：<input type="text" name="exhibition_period" value="${fn:escapeXml(product.exhibition_period)}" readonly><br>
 						価格：<input type="text" name="price" value="${fn:escapeXml(product.price)}" readonly><br>
 				<br>
 				<br>
-				<a href="../../RistingCompleted" class="btn-square-so-pop">出品する</a>　　　　　　　　　　　　　　　　　　　　　　<a href="../../ProductInput" class="btn-square-so-opo">編集する</a>
+
+				<button class="btn-square-so-pop">出品する</button>
+
+				</div>
 
 
-				　　　
-
-
-
-		</div>
-
+			</form>
 
 	</div>
+
+
 
 
 	</body>

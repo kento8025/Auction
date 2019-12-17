@@ -25,8 +25,8 @@
 
 
 
-		<button type=“button” onclick="location.href='../../hoomPege'">戻る</button></div>　　　　　　　　　　　　　　　　
-		<button type=“button” onclick="location.href='../../SearchResults'">続けて落札する</button></div>
+		<button type=“button” onclick="location.href='/hoomPege'">戻る</button></div>　　　　　　　　　　　　　　　　
+		<button type=“button” onclick="location.href='/SearchResults'">続けて落札する</button></div>
 
 
 

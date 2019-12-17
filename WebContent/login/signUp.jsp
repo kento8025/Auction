@@ -78,7 +78,7 @@ s
 
 	<!--ホームリンクタイトル画像-->
 
-	<a href="../hoomPege"> <img src="../img/Title.png" alt="タイトル"
+	<a href="../homePege"> <img src="../img/Title.png" alt="タイトル"
 		width="200" height="80"></a>
 	<br>
 

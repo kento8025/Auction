@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dto.User;
-import entity.userDao;
+import entity.UserDao;
 
 /**
  * Servlet implementation class servletRegisTration
@@ -55,7 +55,7 @@ public class servletRegisTration extends HttpServlet {
 		String passWord = request.getParameter("passWord");
 
 		User user = new User(userName, year, month, day, manOrWoman, mail, id, passWord);
-		userDao dao = new userDao();
+		UserDao dao = new UserDao();
 
 		dao.register(user);
 

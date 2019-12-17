@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -267,8 +269,7 @@ a {
 	<!--検索欄-->
 
 
-
-	<form id="searchForm" action="">
+	<form id="searchForm" action="SearchResults">
 		<input id="sbox" id="s" name="search" type="text"
 			placeholder="キーワードを入力" /> <input id="sbtn" type="submit" value="検索" />
 	</form>
@@ -276,7 +277,86 @@ a {
 
 	<!--ログイン画面-->
 
-	<div id="login">
+
+	<c:choose>
+
+		<c:when test="${sessionScope.user.userRank eq '1'}">
+
+		<div id="login">
+
+				<h2>管理者${sessionScope.user.userName}さん</h2>
+			<br>
+
+			<form action="LoginCheck" method="post">
+
+				ID<input type="text" name="id" value='${sessionScope.user.id}'><br>
+				password<input type="passWord" name="passWord"
+
+					value='${sessionScope.user.passWord}'><br>
+				<button class="btn-square">ログイン</button>
+				<br>
+				<button class="btn-square" name = "logout" value= "out">ログアウト</button>
+
+			</form>
+
+		</div>
+
+
+		</c:when>
+		<c:when test="${sessionScope.user.userRank eq '2'}">
+
+
+			<div id="login">
+
+				<h2>ようこそ！${sessionScope.user.userName}さん</h2>
+
+				<br>
+
+			<form action="LoginCheck" method="post">
+
+				ID<input type="text" name="id" value='${sessionScope.user.id}'><br>
+				password<input type="passWord" name="passWord"
+
+					value='${sessionScope.user.passWord}'><br>
+				<button class="btn-square">ログイン</button>
+				<br>
+				<button class="btn-square" name = "logout" value= "out">ログアウト</button>
+
+
+				<br>
+			</form>
+
+			</div>
+		</c:when>
+		<c:otherwise>
+
+			<div id="login">
+
+				<form action="LoginCheck" method="post">
+
+					ID<input type="text" name="id" value='${sessionScope.user.id}'><br>
+					password<input type="passWord" name="passWord"
+
+						value='${sessionScope.user.passWord}'><br>
+					<button class="btn-square">ログイン</button>
+
+					<br>
+				</form>
+
+				<form action="SignUp" method="post">
+					<div>
+						<button class="btn-square-so-pop">新規登録</button>
+					</div>
+				</form>
+
+			</div>
+
+		</c:otherwise>
+	</c:choose>
+
+
+
+	<%-- <div id="login">
 
 		<form action="LoginCheck" method="post">
 			ID<input type="text" name="id" value='${sessionScope.user.id}'><br>
@@ -292,7 +372,7 @@ a {
 			</div>
 		</form>
 
-	</div>
+	</div> --%>
 
 	<!--メニュー表-->
 
@@ -404,8 +484,6 @@ a {
 		</span>
 
 	</div>
-
-
 
 </body>
 <script

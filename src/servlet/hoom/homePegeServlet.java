@@ -11,16 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class hoomPegeServlet
  */
-@WebServlet("/homesPege")
+@WebServlet("/homePage")
 public class homePegeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
+    /**Spring-legasy-DI
      * @see HttpServlet#HttpServlet()
      */
     public homePegeServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**

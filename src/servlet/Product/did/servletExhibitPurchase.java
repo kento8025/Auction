@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dto.PurchaseDisplay;
+import entity.SearchDao;
+
 /**
  * Servlet implementation class servletExhibitPurchase
  */
@@ -27,9 +30,19 @@ public class servletExhibitPurchase extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.sendRedirect("../JSP_Auction/Product/bid/exhibitPurchase.jsp");
+
+		System.out.println("サーブレット");
+
+		String productId =  request.getParameter("productId");
+
+		System.out.println(productId);
+
+		SearchDao searchDao = new SearchDao();
+		PurchaseDisplay purchaseDisplay ;
+		purchaseDisplay = searchDao.productInformation(productId);
+		request.setAttribute("purchaseDisplay",purchaseDisplay);
+
+		request.getRequestDispatcher("/Product/bid/exhibitPurchase.jsp").forward(request, response);
 	}
 
 	/**

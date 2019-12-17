@@ -28,7 +28,7 @@
 
 		<!--ホームリンクタイトル画像-->
 
-		<a href="../hoomPege"> <img src="../img/Title.png" alt="タイトル"
+		<a href="../homePage"> <img src="../img/Title.png" alt="タイトル"
 			width="200" height="80"></a> <br>
 
 		<center>
@@ -40,7 +40,7 @@
 				<br> <br>
 
 				<div id="buttonSenter">
-					<button onclick="location.href='../hoomPege'">戻る</button>
+					<button onclick="location.href='../homePage'">戻る</button>
 				</div>
 
 

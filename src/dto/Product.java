@@ -2,9 +2,11 @@ package dto;
 
 public class Product {
 
+	private int productId;
 	private String productName; /*商品名*/
 	private String productImg; /*商品画像*/
 	private int categoryId; /*カテゴリId 外部キー参照*/
+	private String categoryName; /*カテゴリの名前*/
 	private String productStatus;/*状態*/
 	private String description;/*説明*/
 	private String postage;/*送料負担*/
@@ -113,5 +115,22 @@ public class Product {
 	public void setExhibition_period(int exhibition_period) {
 		this.exhibition_period = exhibition_period;
 	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public int getProductId() {
+		return productId;
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+
 
 }
